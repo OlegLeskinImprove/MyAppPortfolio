@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showToast(String text) {
-        String message = getString(R.string.toast_message_part_1) + " " + text + " " + getString(R.string.toast_message_part_2);
+        String message = String.format(getString(R.string.toast_message_part), text);
         Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 }
